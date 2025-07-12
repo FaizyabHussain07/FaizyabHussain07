@@ -10,6 +10,9 @@ const projects = [
     image: '/screencapture-faizyabhussain07-github-io-Advanced-Tic-Tac-Toi-Game-2025-06-13-19_30_14.png',
     liveUrl: 'https://faizyabhussain07.github.io/Advanced-Tic_Tac_Toi-Game/',
     githubUrl: 'https://github.com/faizyabhussain07/Advanced-Tic_Tac_Toi-Game',
+    category: 'Game Development',
+    technologies: ['React', 'JavaScript', 'CSS', 'HTML'],
+    featured: true
   },
   {
     title: 'College Website',
@@ -17,6 +20,9 @@ const projects = [
     image: '/collegepage - Copy.PNG',
     liveUrl: 'https://faizyabhussain07.github.io/College-website/',
     githubUrl: 'https://github.com/faizyabhussain07/College-website',
+    category: 'Educational',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+    featured: false
   },
   {
     title: 'Parking Management',
@@ -24,6 +30,9 @@ const projects = [
     image: '/screencapture-faizyabhussain07-github-io-Parking-Managment-System-2025-06-13-21_59_30.png',
     liveUrl: 'https://faizyabhussain07.github.io/Parking_Managment_System/',
     githubUrl: 'https://github.com/faizyabhussain07/Parking_Managment_System',
+    category: 'Management System',
+    technologies: ['React', 'JavaScript', 'CSS', 'Local Storage'],
+    featured: false
   },
   {
     title: 'Quran Diniyat Quiz',
@@ -31,6 +40,9 @@ const projects = [
     image: '/screencapture-faizyabhussain07-github-io-Quran-Diniyat-Quiz-Part-2-2025-06-13-22_01_41.png',
     liveUrl: 'https://faizyabhussain07.github.io/Quran-Diniyat_Quiz--Part_2/',
     githubUrl: 'https://github.com/faizyabhussain07/Quran-Diniyat_Quiz--Part_2',
+    category: 'Educational',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Quiz Logic'],
+    featured: false
   },
   {
     title: 'Apple Website Clone',

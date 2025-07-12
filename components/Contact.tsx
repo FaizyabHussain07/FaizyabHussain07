@@ -72,12 +72,47 @@ const Contact = () => {
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
-    // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000))
+      const formDataToSend = new FormData()
+      formDataToSend.append('name', formData.name)
+      formDataToSend.append('email', formData.email)
+      formDataToSend.append('subject', formData.subject)
+      formDataToSend.append('service', formData.service)
+      formDataToSend.append('message', formData.message)
+      formDataToSend.append('_autoresponse', `Hi there,
+
+Thank you for contacting us — your message has been successfully received.
+
+We've noted your interest and the details you've shared. Our creative team is currently reviewing your request to understand your vision and requirements more deeply. We believe in building thoughtful digital solutions, and your project is important to us.
+
+One of our team members will be in touch shortly to discuss your ideas further and help bring them to life. If you have any additional materials or questions, feel free to reply directly to this email.
+
+Looking forward to collaborating with you!
+
+Warm regards,  
+Faizyab Hussain  
+Founder & Creative Developer  
+📩 Syedfaizyabhussain07@gmail.com  
+🌐 faizyab-hussain07.vercel.app`)
+      formDataToSend.append('_template', 'table')
+      formDataToSend.append('_subject', 'Thank you for contacting Faizyab Hussain')
+      formDataToSend.append('_captcha', 'false')
+      formDataToSend.append('_replyto', formData.email)
+
+      const response = await fetch('https://formsubmit.co/syedfaizyabhussain07@gmail.com', {
+        method: 'POST',
+        body: formDataToSend,
+        mode: 'no-cors', // This should help with CORS issues
+      })
+
+      console.log('FormSubmit Response:', response.status, response.statusText)
+
+      // Since we're using no-cors, we can't read the response, but if we get here, it likely succeeded
       setSubmitStatus('success')
       setFormData({ name: '', email: '', subject: '', service: '', message: '' })
+      
     } catch (error) {
+      console.error('FormSubmit Error:', error)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)

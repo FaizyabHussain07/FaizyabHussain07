@@ -4,6 +4,9 @@ import Skills from '@/components/Skills'
 import ServicesPage from './services/page'
 import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
+import Testimonials from '@/components/Testimonials'
+import Pricing from '@/components/Pricing'
+import FAQ from '@/components/FAQ'
 
 export default function Home() {
   return (
@@ -13,7 +16,10 @@ export default function Home() {
       <Skills />
       <Projects />
       <ServicesPage/>
+      <Pricing />
+      <Testimonials />
       <Contact />
+      <FAQ />
     </main>
   )
 } 

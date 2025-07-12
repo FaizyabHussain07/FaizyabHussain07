@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://your-portfolio.com',
+    url: 'https://faizyab-hussain07.vercel.app/',
     title: 'Faizyab Hussain - Professional Portfolio',
     description: 'Frontend Developer & Web Designer.',
     siteName: 'Faizyab Hussain Portfolio',
@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+  icons: {
+    icon: '/favicon.png',
   },
 }
 

@@ -1,9 +1,52 @@
 "use client"
 
 import { motion } from 'framer-motion'
-import { ArrowDown, Github, Linkedin, Mail, Phone } from 'lucide-react'
+import { ArrowDown, Github, Linkedin, Mail, Phone, Download } from 'lucide-react'
+import { useState, useEffect } from 'react'
 
 const Hero = () => {
+  const [currentText, setCurrentText] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
+  const [displayText, setDisplayText] = useState('')
+  const [delta, setDelta] = useState(300 - Math.random() * 100)
+
+  const texts = [
+    'Full Stack Developer',
+    'Web Designer',
+    'Vibe Coder',
+    'Problem Solver'
+  ]
+
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick()
+    }, delta)
+
+    return () => { clearInterval(ticker) }
+  }, [displayText])
+
+  const tick = () => {
+    let fullText = texts[currentText]
+    let updatedText = isDeleting 
+      ? fullText.substring(0, displayText.length - 1)
+      : fullText.substring(0, displayText.length + 1)
+
+    setDisplayText(updatedText)
+
+    if (isDeleting) {
+      setDelta(prevDelta => prevDelta / 2)
+    }
+
+    if (!isDeleting && updatedText === fullText) {
+      setDelta(2000)
+      setIsDeleting(true)
+    } else if (isDeleting && updatedText === '') {
+      setIsDeleting(false)
+      setCurrentText(prev => (prev + 1) % texts.length)
+      setDelta(500)
+    }
+  }
+
   const scrollToAbout = () => {
     const element = document.querySelector('#about')
     if (element) {
@@ -32,7 +75,8 @@ const Hero = () => {
             Hi, I'm <span className="text-blue-600">Faizyab Hussain</span>
           </motion.h1>
           <h2 className="text-xl md:text-2xl text-slate-700 dark:text-slate-300 font-medium mb-4">
-            Full Stack Developer, Vibe Coder & Web Designer
+            <span className="text-blue-600">{displayText}</span>
+            <span className="animate-pulse">|</span>
           </h2>
           <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-xl">
             I create beautiful, responsive websites that help businesses achieve their goals. With a passion for clean code and intuitive design, I bring ideas to life.
@@ -54,6 +98,7 @@ const Hero = () => {
             >
               Hire Me
             </motion.a>
+              
           </div>
           <div className="flex justify-center md:justify-start space-x-4 mt-4">
             {socialLinks.map((social, index) => (
@@ -77,6 +122,24 @@ const Hero = () => {
             <img src="/ChatGPT Image Apr 5, 2025, 07_56_20 PM (1).png" alt="Faizyab Hussain" className=" w-full h-full" />
           </div>
         </div>
+        
+        {/* Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        >
+          <motion.button
+            onClick={scrollToAbout}
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="flex flex-col items-center text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors"
+          >
+            <span className="text-sm mb-2">Scroll Down</span>
+            <ArrowDown size={24} />
+          </motion.button>
+        </motion.div>
       </div>
     </section>
   )
