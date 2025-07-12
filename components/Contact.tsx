@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
 
-// --- NO CHANGES HERE ---
 const services = [
   'Custom Web Development',
   'Web Design',
@@ -68,7 +67,6 @@ const Contact = () => {
     }))
   }
 
-  // --- THIS IS THE UPDATED FUNCTION ---
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -96,7 +94,9 @@ Founder & Creative Developer
     };
 
     try {
-      const response = await fetch('https://formsubmit.co/syedfaizyabhussain07@gmail.com', {
+      // --- THE ONLY CHANGE IS IN THIS LINE ---
+      // We are using the secure URL provided by FormSubmit after activation.
+      const response = await fetch('https://formsubmit.co/1a537cdcaf9970899468a6d5145a7138', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -106,12 +106,9 @@ Founder & Creative Developer
       })
 
       if (response.ok) {
-        console.log('Form submitted successfully!');
         setSubmitStatus('success');
         setFormData({ name: '', email: '', subject: '', service: '', message: '' });
       } else {
-        const errorData = await response.json();
-        console.error('Form submission failed:', errorData);
         setSubmitStatus('error');
       }
       
@@ -124,7 +121,6 @@ Founder & Creative Developer
   }
 
   return (
-    // --- NO CHANGES TO THE JSX PART ---
     <section id="contact" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
