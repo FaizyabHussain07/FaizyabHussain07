@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
 
+// --- NO CHANGES HERE ---
 const services = [
   'Custom Web Development',
   'Web Design',
@@ -67,19 +68,15 @@ const Contact = () => {
     }))
   }
 
+  // --- THIS IS THE UPDATED FUNCTION ---
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
-    try {
-      const formDataToSend = new FormData()
-      formDataToSend.append('name', formData.name)
-      formDataToSend.append('email', formData.email)
-      formDataToSend.append('subject', formData.subject)
-      formDataToSend.append('service', formData.service)
-      formDataToSend.append('message', formData.message)
-      formDataToSend.append('_autoresponse', `Hi there,
+    const data = {
+      ...formData,
+      _autoresponse: `Hi there,
 
 Thank you for contacting us — your message has been successfully received.
 
@@ -87,39 +84,47 @@ We've noted your interest and the details you've shared. Our creative team is cu
 
 One of our team members will be in touch shortly to discuss your ideas further and help bring them to life. If you have any additional materials or questions, feel free to reply directly to this email.
 
-Looking forward to collaborating with you!
-
 Warm regards,  
 Faizyab Hussain  
 Founder & Creative Developer  
 📩 Syedfaizyabhussain07@gmail.com  
-🌐 faizyab-hussain07.vercel.app`)
-      formDataToSend.append('_template', 'table')
-      formDataToSend.append('_subject', 'Thank you for contacting Faizyab Hussain')
-      formDataToSend.append('_captcha', 'false')
-      formDataToSend.append('_replyto', formData.email)
+🌐 faizyab-hussain07.vercel.app`,
+      _template: 'table',
+      _subject: 'Thank you for contacting Faizyab Hussain',
+      _captcha: 'false',
+      _replyto: formData.email,
+    };
 
+    try {
       const response = await fetch('https://formsubmit.co/syedfaizyabhussain07@gmail.com', {
         method: 'POST',
-        body: formDataToSend,
-        mode: 'no-cors', // This should help with CORS issues
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json' 
+        },
+        body: JSON.stringify(data),
       })
 
-      console.log('FormSubmit Response:', response.status, response.statusText)
-
-      // Since we're using no-cors, we can't read the response, but if we get here, it likely succeeded
-      setSubmitStatus('success')
-      setFormData({ name: '', email: '', subject: '', service: '', message: '' })
+      if (response.ok) {
+        console.log('Form submitted successfully!');
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', service: '', message: '' });
+      } else {
+        const errorData = await response.json();
+        console.error('Form submission failed:', errorData);
+        setSubmitStatus('error');
+      }
       
     } catch (error) {
-      console.error('FormSubmit Error:', error)
-      setSubmitStatus('error')
+      console.error('An error occurred during form submission:', error);
+      setSubmitStatus('error');
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
   }
 
   return (
+    // --- NO CHANGES TO THE JSX PART ---
     <section id="contact" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -351,4 +356,4 @@ Founder & Creative Developer
   )
 }
 
-export default Contact 
+export default Contact
