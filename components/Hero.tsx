@@ -12,8 +12,8 @@ const Hero = () => {
 
   const texts = [
     'Full Stack Developer',
-    'Web Designer',
     'Vibe Coder',
+    'Web Designer',
     'Problem Solver'
   ]
 
@@ -94,11 +94,18 @@ const Hero = () => {
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded hover:bg-blue-50 transition-all duration-300"
+              className="px-8 py-3 bg-green-600 text-white font-semibold rounded shadow hover:bg-green-700 transition-all duration-300"
             >
               Hire Me
             </motion.a>
-              
+            <motion.a
+              href="/resume"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-3 bg-amber-500 text-white font-semibold rounded shadow hover:bg-amber-600 transition-all duration-300"
+            >
+              Resume View
+            </motion.a>
           </div>
           <div className="flex justify-center md:justify-start space-x-4 mt-4">
             {socialLinks.map((social, index) => (
@@ -122,24 +129,6 @@ const Hero = () => {
             <img src="/ChatGPT Image Apr 5, 2025, 07_56_20 PM (1).png" alt="Faizyab Hussain" className=" w-full h-full" />
           </div>
         </div>
-        
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <motion.button
-            onClick={scrollToAbout}
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors"
-          >
-            <span className="text-sm mb-2">Scroll Down</span>
-            <ArrowDown size={24} />
-          </motion.button>
-        </motion.div>
       </div>
     </section>
   )
