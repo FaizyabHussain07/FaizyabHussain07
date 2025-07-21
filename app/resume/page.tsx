@@ -6,6 +6,7 @@ export default function ResumePage() {
       <div className="flex justify-center items-start">
         <Resume />
       </div>
+      
     </section>
   );
 } 
