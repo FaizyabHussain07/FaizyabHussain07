@@ -1,4 +1,4 @@
-# Faizyab Hussain 
+<h1 align="center"> Faizyab Hussain </h1>
 
 <p align="center">
   <b>Helping businesses and individuals grow with beautiful, high-performance web solutions.</b>
