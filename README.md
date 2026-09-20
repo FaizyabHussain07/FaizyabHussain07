@@ -4,124 +4,194 @@
 
 ### Solo Builder · Full-Stack Developer · AI Product Builder
 
-I build and ship **web products, SaaS, and AI-powered tools**.
+I build **web products, SaaS, developer tools, and AI-powered applications**.
 
-From idea → code → deployment → iteration.
+I like turning ideas into working products — from the first sketch to deployment.
 
 <br />
 
-[**Portfolio**](https://faizyab-hussain.vercel.app/) ·
-[**LinkedIn**](https://linkedin.com/in/faizyabhussain) ·
-[**X**](https://x.com/FaizyabHus74391)
+[Portfolio](https://faizyab-hussain.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/faizyabhussain) · [X](https://x.com/FaizyabHus74391)
 
 </div>
 
 ---
 
-## Currently Building
+## What I'm Building
 
-### DevWeaveX
+I'm interested in the intersection of **software, AI, and products**.
 
-A software and product studio focused on building modern web applications, digital products, and AI-powered solutions.
+Right now, I'm exploring:
 
-### FAIZYAB AI Website Builder
-
-An AI-powered workflow that turns business requirements into complete website solutions.
-
-### MyPage
-
-A simple platform for creating and publishing personal or business pages.
-
-### Slik Engine
-
-A developer tool for generating project structures and getting ideas from concept to a working starting point.
+* AI engineering & agentic systems
+* Full-stack product development
+* SaaS & developer tools
+* AI-powered workflows
+* Product design & experimentation
 
 ---
 
-## Selected Work
+## Selected Builds
 
-| Project         | Description                          |                                                           |
-| --------------- | ------------------------------------ | --------------------------------------------------------- |
-| **Readme.ai**   | AI-powered GitHub README builder     | [Live](https://readme-builder-ai.floot.app/)              |
-| **Slik Engine** | Developer project generation tool    | [GitHub](https://github.com/Faizyabhussain07/slik-engine) |
-| **MyPage**      | Page-building platform               | [Live](https://mypage-builder.vercel.app/)                |
-| **DevWeaveX**   | Software & product studio            | [Live](https://devweavex.netlify.app/)                    |
-| **TeleCloud**   | Telegram-based cloud storage concept | —                                                         |
+### [TeleCloud](https://app-telecloud.vercel.app/)
+
+**Private cloud storage powered by Telegram.**
+
+Upload, organize, search, preview and share files across devices while using a private Telegram channel for file storage.
+
+`Next.js` `PostgreSQL` `Telegram API` `OAuth`
 
 ---
 
-## What I Work With
+### [DevPass](https://devpass-app.vercel.app/)
 
-**Frontend**
+**A professional identity platform for software engineers.**
 
-`TypeScript` · `JavaScript` · `React` · `Next.js` · `HTML` · `CSS` · `Tailwind CSS`
+A developer passport concept combining verified profiles, GitHub analysis, role-based assessments, AI-generated summaries and company matching.
+
+`React` `Node.js` `AI APIs` `REST API`
+
+---
+
+### [Slik](https://slik-dev.vercel.app/)
+
+**A SaaS starter and project generation toolkit.**
+
+A multi-framework boilerplate with authentication, dashboards, admin panels and a CLI to help developers move from idea to starting code faster.
+
+`Next.js` `React` `Supabase` `CLI`
+
+---
+
+### [PasteLink Pro](https://paste-link-pro.vercel.app/)
+
+**Temporary text and code sharing.**
+
+Secure sharing with password protection, burn-after-read, automatic expiry, unique links and QR codes.
+
+`React` `Node.js` `MongoDB`
+
+---
+
+### [PromptAudit](https://prompt-audit.lovable.app/)
+
+**AI-powered SEO, GEO & AEO auditing.**
+
+Analyze a public website, identify issues and generate actionable AI prompts for fixing them.
+
+`React` `AI APIs` `Node.js`
+
+---
+
+### [Web Template Hub](https://web-template-hub.netlify.app/)
+
+**Open-source templates and UI components for builders.**
+
+A growing collection of reusable HTML templates and Tailwind CSS components designed for fast prototyping and production use.
+
+`HTML` `Tailwind CSS` `JavaScript`
+
+---
+
+## Other Experiments
+
+I've also built and explored products across different problem spaces:
+
+**QuizSpark** — AI-powered quiz generation
+
+**ClinicFlow** — Clinic management and appointment system
+
+**BuildLayout** — Browser-based 2D floor-plan editor
+
+**Readme.ai** — AI-powered GitHub README builder
+
+And a collection of website concepts for restaurants, gyms, clinics, law firms, real estate, home services and other businesses.
+
+[**See all projects →**](https://faizyab-hussain.vercel.app/projects)
+
+---
+
+## Stack
+
+**Languages & Frontend**
+
+`TypeScript` · `JavaScript` · `React` · `Next.js` · `HTML` · `CSS`
+
+**Styling**
+
+`Tailwind CSS`
 
 **Backend & Data**
 
-`Node.js` · `Express` · `REST APIs` · `PostgreSQL` · `MongoDB` · `Supabase`
+`Node.js` · `Express` · `PostgreSQL` · `MongoDB` · `Supabase` · `REST APIs`
 
-**AI & Infrastructure**
+**AI & Product**
 
-`LLM APIs` · `AI Agents` · `Git` · `GitHub` · `Vercel` · `Figma`
+`LLM APIs` · `AI Agents` · `AI Workflows`
+
+**Tools & Infrastructure**
+
+`Git` · `GitHub` · `Vercel` · `Figma` · `VS Code`
 
 ---
 
-## My Approach
-
-I like building things from scratch.
-
-Not just writing code, but understanding the problem, designing the product, building the system, deploying it, and improving it.
+## How I Build
 
 ```text
-Find a problem
-      ↓
-Build a solution
-      ↓
-Ship it
-      ↓
-Learn from it
-      ↓
-Make it better
+Problem
+   ↓
+Idea
+   ↓
+Build
+   ↓
+Ship
+   ↓
+Learn
+   ↓
+Iterate
 ```
+
+I prefer building real things over waiting for the perfect idea.
+
+Some projects become products.
+
+Some become experiments.
+
+Either way, each one teaches me something new.
 
 ---
 
-## Exploring
-
-Currently going deeper into:
+## Currently Learning
 
 * AI Engineering
 * Agentic AI
-* LLM applications
-* Full-stack architecture
-* SaaS products
-* Developer tools
+* LLM application development
+* Backend architecture
+* SaaS architecture
 * Product engineering
+* Building and shipping faster
 
 ---
 
-## Beyond Code
+## Find Me
 
-I’m interested in the intersection of:
+**Portfolio**
+https://faizyab-hussain.vercel.app/
 
-**Software × AI × Products × Business**
+**LinkedIn**
+https://www.linkedin.com/in/faizyabhussain
 
-The long-term goal is simple:
+**X**
+https://x.com/FaizyabHus74391
 
-> Build useful products that people actually want to use.
+**Email**
+[syedfaizyabhussain07@gmail.com](mailto:syedfaizyabhussain07@gmail.com)
 
 ---
 
 <div align="center">
 
-### Let's build.
+### Build. Ship. Learn. Repeat.
 
-[Portfolio](https://faizyab-hussain.vercel.app/) ·
-[LinkedIn](https://linkedin.com/in/faizyabhussain) ·
-[X](https://x.com/FaizyabHus74391)
-
-<br />
-
-<sub>Build · Ship · Learn · Repeat</sub>
+<sub>Building products from Karachi, Pakistan.</sub>
 
 </div>
